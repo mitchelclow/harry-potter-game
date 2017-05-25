@@ -42,91 +42,35 @@
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;";><img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px;"><img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250"></div>
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
-        <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-top: 9px;"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
+        <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
+
+         <div style = "float: right; margin-top: 50px;"><img src="http://i.imgur.com/1s6etBg.png" alt="poterLogo" style = "width: 80%;">
+        <!-- <p style = "color: white">Fighting Game</p> -->
+         </div>
+
+        <container style = "color: white; clear: left; margin-top: 38px"><h1>Choose your spellcaster</h1>
+        Your character's health is just as important as their attack power.
+        <br>
+        Your attack power doubles every time you strike an opponent.
+        <br>
+        However, if your health points reach 0, you lose.
+        <br>
+        Fight the remaining characters in the best order to win.
+        <br>
+        Good luck!</container>
         
 
     </header>
 
-<!--     <h1 style =  "color:white">Choose a spellcaster</h1> -->
+   
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
     </script>
 
 </body>
