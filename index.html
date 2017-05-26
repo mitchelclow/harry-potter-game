@@ -56,11 +56,38 @@
         However, if your health points reach 0, you lose.
         <br>
         Fight the remaining characters in the best order to win.
-        <br>
-        Good luck!</container>
+        <br></container>
+
+        <button class="btn btn-warning btn-xs theme-button"><span class="glyphicon glyphicon-music"></span> Play Music</button>
+        <button class="btn btn-default btn-xs pause-button"><span class="glyphicon glyphicon-pause"></span> Pause Song</button>
         
 
     </header>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+    <!-- Script -->
+    <script>
+
+    $(document).ready(function() {
+
+    var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", "https://ia601509.us.archive.org/26/items/maingame/maingame.mp3");
+
+      // Theme Button
+      $(".theme-button").on("click", function() {
+        audioElement.play();
+      });
+
+      $(".pause-button").on("click", function() {
+        audioElement.pause();
+      });
+
+      });
+
+
+    </script>
 
    
 
