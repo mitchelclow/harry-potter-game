@@ -39,6 +39,8 @@
             <h1 style="color:white;"></h1>
         </div>
 
+        
+    <div id="charselect">
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;";><img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px;"><img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250"></div>
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
@@ -60,6 +62,12 @@
 
         <button class="btn btn-warning btn-xs theme-button"><span class="glyphicon glyphicon-music"></span> Play Music</button>
         <button class="btn btn-default btn-xs pause-button"><span class="glyphicon glyphicon-pause"></span> Pause Song</button>
+    </div>
+
+    <div id="activechar">
+    </div>
+    <div id="defendchar">
+    </div>
         
 
     </header>
@@ -71,6 +79,56 @@
     <script>
 
     $(document).ready(function() {
+
+    var harry
+    var hermione
+    var snape
+    var voldemort
+
+    //audio clips
+let harrychoose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrychoose.mp3');
+let harrywin = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrywin.mp3');
+let harrylose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrylose.mp3');
+let hermionechoose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionechoose.mp3');
+let hermionewin = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionewin.mp3');
+let hermionelose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionelose.mp3');
+let snapechoose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapechoose.mp3');
+let snapewin = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapewin.mp3');
+let snapelose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapelose.mp3');
+let voldemortchoose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortchoose.mp3');
+let voldemortwin = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortwin.mp3');
+let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
+
+    let characters = {
+    'Harry': {
+        name: 'Harry',
+        health: 120,
+        attack: 8,
+        imageUrl: "http://i.imgur.com/X4FvjfZ.png",
+        enemyAttackBack: 15
+    }, 
+    'Hermione': {
+        name: 'Hermione',
+        health: 100,
+        attack: 14,
+        imageUrl: "http://i.imgur.com/r8BHvb0.png",
+        enemyAttackBack: 5
+    }, 
+    'Snape': {
+        name: 'Snape',
+        health: 150,
+        attack: 8,
+        imageUrl: "http://i.imgur.com/7NwoQW5.png",
+        enemyAttackBack: 20
+    }, 
+    'Voldemort': {
+        name: 'Voldemort',
+        health: 180,
+        attack: 7,
+        imageUrl: "http://i.imgur.com/YrG6Wja.png",
+        enemyAttackBack: 20
+    }
+
 
     var audioElement = document.createElement("audio");
     audioElement.setAttribute("src", "https://ia601509.us.archive.org/26/items/maingame/maingame.mp3");
@@ -85,6 +143,13 @@
       });
 
       });
+
+    //create variables
+    //make if statements for when each character is clicked
+    //this includes where each goes
+    //apply attack and health to each character
+    //sounds for choosing, winning, and losing
+    //reset function for when the game ends (both losing and winning)
 
 
     </script>
