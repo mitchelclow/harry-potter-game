@@ -75,6 +75,14 @@
 
     <div class="defendchar">
     </div>
+
+    <div class = "harryhealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 34px; top: 240px;">Health: 120 | Attack: 8</div>
+
+    <div class = "hermionehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 290px; top: 240px;">Health: 100 | Attack: 13</div>
+
+    <div class = "snapehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 550px; top: 240px;">Health: 150 | Attack: 6</div>
+
+    <div class = "voldemorthealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 800px; top: 240px;">Health: 90 | Attack: 12</div>
         
 
     </header>
@@ -112,15 +120,15 @@ var harryattack = 8;
 var harryAttackBack = 15;
 
 var hermionehealth = 100;
-var hermioneattack = 14;
+var hermioneattack = 13;
 var hermioneAttackBack = 5;
 
 var snapehealth = 150;
-var snapeattack = 8;
+var snapeattack = 6;
 var snapeAttackBack = 20;
 
-var voldemorthealth = 180;
-var voldemortattack = 7;
+var voldemorthealth = 90;
+var voldemortattack = 12;
 var voldemortAttackBack = 20;
 
 
@@ -142,6 +150,10 @@ var voldemortAttackBack = 20;
         $(".snapefight").hide();
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
+        $(".harryhealth").hide();
+        $(".hermionehealth").hide();
+        $(".snapehealth").hide();
+        $(".voldemorthealth").hide();
         $(".mainlogo").hide();
         $(".activechar").prepend(
         '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250">');
@@ -150,10 +162,6 @@ var voldemortAttackBack = 20;
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        // $(".activechar")document.html("Your Character");
-        // $(."defendchar")document.html("Enemy Character");
-       // $("#activechar").prepend(
-       //  '<img src="http://i.imgur.com/Xqa3lAi.png" alt="green" height="250" width="250"></div>')
       });
 
        $(".hermionefight").on("click", function() {
@@ -163,6 +171,10 @@ var voldemortAttackBack = 20;
         $(".snapefight").hide();
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
+        $(".harryhealth").hide();
+        $(".hermionehealth").hide();
+        $(".snapehealth").hide();
+        $(".voldemorthealth").hide();
         $(".mainlogo").hide();
         $(".enemylogo").prepend(
         '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
@@ -182,6 +194,10 @@ var voldemortAttackBack = 20;
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
         $(".mainlogo").hide();
+        $(".harryhealth").hide();
+        $(".hermionehealth").hide();
+        $(".snapehealth").hide();
+        $(".voldemorthealth").hide();
         $(".enemylogo").prepend(
         '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend(
@@ -199,6 +215,10 @@ var voldemortAttackBack = 20;
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
         $(".mainlogo").hide();
+        $(".harryhealth").hide();
+        $(".hermionehealth").hide();
+        $(".snapehealth").hide();
+        $(".voldemorthealth").hide();
         $(".enemylogo").prepend(
         '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend(
@@ -216,12 +236,10 @@ var voldemortAttackBack = 20;
 
 
 
-      // $("#harryfight").click(function() { alert( "You clicked me" ); });
-
-      // });
-
-   
+      
+   //display health and attack on main page
     //apply attack and health to each character
+    // make attack button for each character's onclick function
     //sounds for winning, and losing
     //reset function for when the game ends (both losing and winning)
 
