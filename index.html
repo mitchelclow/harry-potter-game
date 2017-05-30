@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Harry Potter Fighting Game</title>
+    <title>Harry Potter Dueling Game</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
         <div class="snapefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
         <div class="voldemortfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
 
-         <div style = "position: absolute; left: 450px; top: 300px;"><img src="http://i.imgur.com/ECtWXE2.png" alt="poterLogo" style = "width: 80%;">
+         <div class = "mainlogo" style = "position: absolute; left: 450px; top: 300px;"><img src="http://i.imgur.com/ECtWXE2.png" alt="poterLogo" style = "width: 80%;">
         <!-- <p style = "color: white">Fighting Game</p> -->
          </div>
 
@@ -65,8 +65,12 @@
         <button class="btn btn-default btn-xs pause-button"  style = "position: absolute; bottom: 10px; right: 30px;"><span class="glyphicon glyphicon-pause"></span> Pause Music</button>
     </div>
 
-    <div id="activechar">
+    <br>
+    <div id="activechar" style = "margin: 100px, 100px, 100px, 100px">
     </div>
+    <br>
+    <br>
+
     <div id="defendchar">
     </div>
         
@@ -151,8 +155,14 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         $(".snapefight").hide();
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
+        $(".mainlogo").hide();
         $("#activechar").prepend(
-        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>')
+        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+       // $("#activechar").prepend(
+       //  '<img src="http://i.imgur.com/Xqa3lAi.png" alt="green" height="250" width="250"></div>')
       });
 
        $(".hermionefight").on("click", function() {
@@ -162,6 +172,13 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         $(".snapefight").hide();
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
+        $(".mainlogo").hide();
+        $("#defendchar").prepend(
+        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+        $("#activechar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+
       });
 
        $(".snapefight").on("click", function() {
@@ -171,6 +188,12 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         $(".snapefight").hide();
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
+        $(".mainlogo").hide();
+        $("#defendchar").prepend(
+        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
+        $("#activechar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
       });
 
        $(".voldemortfight").on("click", function() {
@@ -180,11 +203,13 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         $(".snapefight").hide();
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
+        $(".mainlogo").hide();
+        $("#defendchar").prepend(
+        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
+        $("#defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
+        $("#activechar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
       });
-
-
-    // $( "#charselect" ).click(function()
-    //     { $( this ).hide(); });
 
   });
 
@@ -198,11 +223,9 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
 
       // });
 
-    //create variables
-    //make if statements for when each character is clicked
-    //this includes where each goes
+   
     //apply attack and health to each character
-    //sounds for choosing, winning, and losing
+    //sounds for winning, and losing
     //reset function for when the game ends (both losing and winning)
 
 
