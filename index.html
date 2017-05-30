@@ -26,147 +26,149 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
 
-</head>
+    </head>
 
-<body>
+    <body>
 
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1 style="color:white;"></h1>
-        </div>
+        <!-- Header -->
+        <header id="top" class="header">
+            <div class="text-vertical-center">
+                <h1 style="color:white;"></h1>
+            </div>
 
-        
-    <div id="charselect">
-        <div class="harryfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;">
-        <img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>
-        <div class="hermionefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px;"><img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250"></div>
-        <div class="snapefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
-        <div class="voldemortfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
 
-         <div class = "mainlogo" style = "position: absolute; left: 450px; top: 300px;"><img src="http://i.imgur.com/ECtWXE2.png" alt="poterLogo" style = "width: 80%;">
-        <!-- <p style = "color: white">Fighting Game</p> -->
-         </div>
+            <div id="charselect">
+                <div class="harryfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;">
+                    <img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>
+                    <div class="hermionefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px;"><img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250"></div>
+                    <div class="snapefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
+                    <div class="voldemortfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
 
-        <container class="choosespellcaster" style = "color: white; clear: left; margin-top: 38px"><h1>Choose your spellcaster</h1>
-        Your character's health is just as important as their attack power.
-        <br>
-        Your attack power doubles every time you strike an opponent.
-        <br>
-        However, if your health points reach 0, you lose.
-        <br>
-        Fight the remaining characters in the best order to win.
-        <br></container>
+                    <div class = "mainlogo" style = "position: absolute; left: 450px; top: 300px;"><img src="http://i.imgur.com/ECtWXE2.png" alt="poterLogo" style = "width: 80%;">
+                        <!-- <p style = "color: white">Fighting Game</p> -->
+                    </div>
 
-        <button class="btn btn-warning btn-xs theme-button" style = "position: absolute; bottom: 10px; right: 120px;"><span class="glyphicon glyphicon-music"></span> Play Music</button>
-        <button class="btn btn-default btn-xs pause-button"  style = "position: absolute; bottom: 10px; right: 30px;"><span class="glyphicon glyphicon-pause"></span> Pause Music</button>
-    </div>
+                    <container class="choosespellcaster" style = "color: white; clear: left; margin-top: 38px"><h1>Choose your spellcaster</h1>
+                        Your character's health is just as important as their attack power.
+                        <br>
+                        Your attack power doubles every time you strike an opponent.
+                        <br>
+                        However, if your health points reach 0, you lose.
+                        <br>
+                        Fight the remaining characters in the best order to win.
+                        <br></container>
 
-    <br>
-    <div class="activechar">
-    </div>
-    <div class="harrystats" style="color: white; font-size: 20px;">
-    </div>
-    <div class="hermionestats" style="color: white; font-size: 20px; display: inline-block; width: 200px;">
-    </div>
-    <div class="snapestats" style="color: white; font-size: 20px; display: inline-block; width: 200px; float: left;">
-    </div>
-    <div class="voldemortstats" style="color: white; font-size: 20px; display: inline-block; width: 200px; float: left;">
-    </div>
-    <br>
-     <div class="attackbutton">
-    </div>
-    <br>
-    <div class="enemylogo">
-    </div>
+                        <button class="btn btn-warning btn-xs theme-button" style = "position: absolute; bottom: 10px; right: 120px;"><span class="glyphicon glyphicon-music"></span> Play Music</button>
+                        <button class="btn btn-default btn-xs pause-button"  style = "position: absolute; bottom: 10px; right: 30px;"><span class="glyphicon glyphicon-pause"></span> Pause Music</button>
+                    </div>
 
-    <div class="defendchar">
-    </div> 
+                    <br>
+                    <div class="activechar">
+                    </div>
+                    <div class="harrystats" style="color: white; font-size: 20px;">
+                    </div>
+                    <div class="hermionestats" style="color: white; font-size: 20px; display: inline-block; width: 200px;">
+                    </div>
+                    <div class="snapestats" style="color: white; font-size: 20px; display: inline-block; width: 200px; float: left;">
+                    </div>
+                    <div class="voldemortstats" style="color: white; font-size: 20px; display: inline-block; width: 200px; float: left;">
+                    </div>
+                    <br>
+                    <div class="attackbutton">
+                    </div>
+                    <br>
+                    <div class="enemylogo">
+                    </div>
 
-    <div class="harryenemy" style="position: absolute; right: 14px; top: 40px; display: inline-block; width: 600px; height: 40px; color: white; font-size: 30px;">
-    </div>
-    <div class="hermioneenemy" style="position: absolute; right: 10px; top: 80px; display: inline-block; width: 600px; height: 40px; color: white; font-size: 30px;">
-    </div>
-    <div class="snapeenemy" style="position: absolute; right: 20px; top: 120px; display: inline-block; width: 590px; height: 40px; color: white; font-size: 30px;">
-    </div>
-    <div class="voldemortenemy" style="position: absolute; right: 20px; top: 160px; display: inline-block; width: 590px; height: 40px; color: white; font-size: 30px;">
-    </div>
+                    <div class="defendchar">
+                    </div> 
 
-    <div class = "harryhealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 34px; top: 240px;">Health: 120 | Attack: 8</div>
+                    <div class="harryenemy" style="position: absolute; right: 14px; top: 40px; display: inline-block; width: 600px; height: 40px; color: white; font-size: 30px;">
+                    </div>
+                    <div class="hermioneenemy" style="position: absolute; right: 10px; top: 80px; display: inline-block; width: 600px; height: 40px; color: white; font-size: 30px;">
+                    </div>
+                    <div class="snapeenemy" style="position: absolute; right: 20px; top: 120px; display: inline-block; width: 590px; height: 40px; color: white; font-size: 30px;">
+                    </div>
+                    <div class="voldemortenemy" style="position: absolute; right: 20px; top: 160px; display: inline-block; width: 590px; height: 40px; color: white; font-size: 30px;">
+                    </div>
 
-    <div class = "hermionehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 290px; top: 240px;">Health: 100 | Attack: 9</div>
+                    <div class = "harryhealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 34px; top: 240px;">Health: 120 | Attack: 8</div>
 
-    <div class = "snapehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 550px; top: 240px;">Health: 150 | Attack: 6</div>
+                    <div class = "hermionehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 290px; top: 240px;">Health: 100 | Attack: 9</div>
 
-    <div class = "voldemorthealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 800px; top: 240px;">Health: 80 | Attack: 12</div>
-        
+                    <div class = "snapehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 550px; top: 240px;">Health: 150 | Attack: 6</div>
 
-    </header>
+                    <div class = "voldemorthealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 800px; top: 240px;">Health: 80 | Attack: 12</div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+                    <div class = "chooseEnemy" style="display: inline-block; width: 1000px; height: 40px; color: orange; font-size: 23px; position: absolute; left: 900px; top: 500px;"></div>
 
-    <!-- Script -->
-    <script>
 
-    $(document).ready(function() {
+                </header>
 
-    var harry
-    var hermione
-    var snape
-    var voldemort
+                <!-- jQuery -->
+                <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+                <!-- Script -->
+                <script>
+
+                    $(document).ready(function() {
+
+                        var harry
+                        var hermione
+                        var snape
+                        var voldemort
 
     //audio clips
-let harrychoose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrychoose.mp3');
-let harrywin = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrywin.mp3');
-let harrylose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrylose.mp3');
-let hermionechoose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionechoose.mp3');
-let hermionewin = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionewin.mp3');
-let hermionelose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionelose.mp3');
-let snapechoose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapechoose.mp3');
-let snapewin = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapewin.mp3');
-let snapelose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapelose.mp3');
-let voldemortchoose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortchoose.mp3');
-let voldemortwin = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortwin.mp3');
-let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
-let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/maingame.mp3');
+    let harrychoose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrychoose.mp3');
+    let harrywin = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrywin.mp3');
+    let harrylose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrylose.mp3');
+    let hermionechoose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionechoose.mp3');
+    let hermionewin = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionewin.mp3');
+    let hermionelose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/hermionelose.mp3');
+    let snapechoose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapechoose.mp3');
+    let snapewin = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapewin.mp3');
+    let snapelose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/snapelose.mp3');
+    let voldemortchoose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortchoose.mp3');
+    let voldemortwin = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortwin.mp3');
+    let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
+    let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/maingame.mp3');
 
-var harryhealth = 120;
-var harryattack = 8;
-var harryAttackBack = 15;
+    var harryhealth = 120;
+    var harryattack = 8;
+    var harryAttackBack = 15;
 
-var hermionehealth = 100;
-var hermioneattack = 9;
-var hermioneAttackBack = 5;
+    var hermionehealth = 100;
+    var hermioneattack = 9;
+    var hermioneAttackBack = 5;
 
-var snapehealth = 150;
-var snapeattack = 6;
-var snapeAttackBack = 20;
+    var snapehealth = 150;
+    var snapeattack = 6;
+    var snapeAttackBack = 20;
 
-var voldemorthealth = 80;
-var voldemortattack = 12;
-var voldemortAttackBack = 20;
+    var voldemorthealth = 80;
+    var voldemortattack = 12;
+    var voldemortAttackBack = 20;
 
-var harryAttackButton = $(".harryattack")
-var hermioneAttackButton
-var snapeAttackButton
-var voldemortAttackButton
+    var harryAttackButton = $(".harryattack")
+    var hermioneAttackButton
+    var snapeAttackButton
+    var voldemortAttackButton
 
       // Theme Button
-        $(".theme-button").on("click", function() {
+      $(".theme-button").on("click", function() {
         maingame.play();
-      });
+    });
 
       $(".pause-button").on("click", function() {
         maingame.pause();
-      });
+    });
 
       //Character Select Functions   
 
-       $(".harryfight").on("click", function() {
+      $(".harryfight").on("click", function() {
         harrychoose.play();
         $(".harryfight").hide();
         $(".hermionefight").hide();
@@ -179,9 +181,9 @@ var voldemortAttackButton
         $(".voldemorthealth").hide();
         $(".mainlogo").hide();
         $(".activechar").prepend(
-        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250">');
+            '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250">');
         $(".enemylogo").prepend(
-        '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
+            '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
@@ -193,9 +195,11 @@ var voldemortAttackButton
         $(".snapeenemy").append(snapeAttackBack);
         $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
         $(".voldemortenemy").append(voldemortAttackBack);
-      });
+        $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
+        
+    });
 
-       $(".hermionefight").on("click", function() {
+      $(".hermionefight").on("click", function() {
         hermionechoose.play();
         $(".harryfight").hide();
         $(".hermionefight").hide();
@@ -208,9 +212,9 @@ var voldemortAttackButton
         $(".voldemorthealth").hide();
         $(".mainlogo").hide();
         $(".enemylogo").prepend(
-        '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
+            '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend(
-        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+            '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
         $(".activechar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
@@ -222,10 +226,11 @@ var voldemortAttackButton
         $(".snapeenemy").append(snapeAttackBack);
         $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
         $(".voldemortenemy").append(voldemortAttackBack);
+        $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
 
-      });
+    });
 
-       $(".snapefight").on("click", function() {
+      $(".snapefight").on("click", function() {
         snapechoose.play();
         $(".harryfight").hide();
         $(".hermionefight").hide();
@@ -238,9 +243,9 @@ var voldemortAttackButton
         $(".snapehealth").hide();
         $(".voldemorthealth").hide();
         $(".enemylogo").prepend(
-        '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
+            '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend(
-        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+            '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
@@ -252,9 +257,10 @@ var voldemortAttackButton
         $(".hermioneenemy").append(hermioneAttackBack);
         $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
         $(".voldemortenemy").append(voldemortAttackBack);
-      });
+        $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
+    });
 
-       $(".voldemortfight").on("click", function() {
+      $(".voldemortfight").on("click", function() {
         voldemortchoose.play();
         $(".harryfight").hide();
         $(".hermionefight").hide();
@@ -267,9 +273,9 @@ var voldemortAttackButton
         $(".snapehealth").hide();
         $(".voldemorthealth").hide();
         $(".enemylogo").prepend(
-        '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
+            '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend(
-        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+            '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
@@ -281,7 +287,8 @@ var voldemortAttackButton
         $(".hermioneenemy").append(hermioneAttackBack);
         $(".snapeenemy").html("Snape's Health: " + snapehealth + "  |  Counter-attack: ")
         $(".snapeenemy").append(snapeAttackBack);
-      });
+        $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
+    });
 
   });
 
@@ -289,27 +296,24 @@ var voldemortAttackButton
 
 
 
-
-    //add enemy health and counter for each character 
     //add "choose a character to attack" and highlight character being attacked  
-    //apply attack and health to each character on fight screen
-    // make attack button specifically for each character's onclick function
+    //make attack button specifically for each character's onclick function
     //sounds for winning, and losing
     //reset function for when the game ends (both losing and winning)
 
 
-    </script>
-
-   
+</script>
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-    </script>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+</script>
 
 </body>
 
