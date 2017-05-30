@@ -68,9 +68,17 @@
     <br>
     <div class="activechar">
     </div>
-    <div class="attackbutton">
+    <div class="harrystats" style="color: white">
+    </div>
+    <div class="hermionestats">
+    </div>
+    <div class="snapestats">
+    </div>
+    <div class="voldemortstats">
     </div>
     <br>
+     <div class="attackbutton">
+    </div>
     <br>
     <div class="enemylogo">
     </div>
@@ -133,6 +141,10 @@ var voldemorthealth = 80;
 var voldemortattack = 12;
 var voldemortAttackBack = 20;
 
+var harryAttackButton
+var hermioneAttackButton
+var snapeAttackButton
+var voldemortAttackButton
 
       // Theme Button
         $(".theme-button").on("click", function() {
@@ -165,6 +177,8 @@ var voldemortAttackBack = 20;
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
         $(".attackbutton").prepend('<button>Attack</button>');
+        $(".harrystats").html("Health: " + harryhealth + "  |   Attack: ");
+        $(".harrystats").append(harryattack);
       });
 
        $(".hermionefight").on("click", function() {
@@ -242,9 +256,9 @@ var voldemortAttackBack = 20;
 
 
 
-      
-    //apply attack and health to each character
-    // make attack button for each character's onclick function
+    //add "choose a character to attack" and highlight character being attacked  
+    //apply attack and health to each character on fight screen
+    // make attack button specifically for each character's onclick function
     //sounds for winning, and losing
     //reset function for when the game ends (both losing and winning)
 
