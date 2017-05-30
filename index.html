@@ -51,7 +51,7 @@
         <!-- <p style = "color: white">Fighting Game</p> -->
          </div>
 
-        <container style = "color: white; clear: left; margin-top: 38px"><h1>Choose your spellcaster</h1>
+        <container class="choosespellcaster" style = "color: white; clear: left; margin-top: 38px"><h1>Choose your spellcaster</h1>
         Your character's health is just as important as their attack power.
         <br>
         Your attack power doubles every time you strike an opponent.
@@ -62,7 +62,7 @@
         <br></container>
 
         <button class="btn btn-warning btn-xs theme-button"><span class="glyphicon glyphicon-music"></span> Play Music</button>
-        <button class="btn btn-default btn-xs pause-button"><span class="glyphicon glyphicon-pause"></span> Pause Song</button>
+        <button class="btn btn-default btn-xs pause-button"><span class="glyphicon glyphicon-pause"></span> Pause Music</button>
     </div>
 
     <div id="activechar">
@@ -150,18 +150,34 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         $(".hermionefight").hide();
         $(".snapefight").hide();
         $(".voldemortfight").hide();
+        $(".choosespellcaster").hide();
       });
 
        $(".hermionefight").on("click", function() {
         hermionechoose.play();
+        $(".harryfight").hide();
+        $(".hermionefight").hide();
+        $(".snapefight").hide();
+        $(".voldemortfight").hide();
+        $(".choosespellcaster").hide();
       });
 
        $(".snapefight").on("click", function() {
         snapechoose.play();
+        $(".harryfight").hide();
+        $(".hermionefight").hide();
+        $(".snapefight").hide();
+        $(".voldemortfight").hide();
+        $(".choosespellcaster").hide();
       });
 
        $(".voldemortfight").on("click", function() {
         voldemortchoose.play();
+        $(".harryfight").hide();
+        $(".hermionefight").hide();
+        $(".snapefight").hide();
+        $(".voldemortfight").hide();
+        $(".choosespellcaster").hide();
       });
 
 
