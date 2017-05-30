@@ -41,11 +41,11 @@
 
         
     <div id="charselect">
-        <div class=".harryfight" style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;";>
+        <div class="harryfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;">
         <img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>
-        <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px;"><img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250"></div>
-        <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
-        <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
+        <div class="hermionefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px;"><img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250"></div>
+        <div class="snapefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
+        <div class="voldemortfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
 
          <div style = "position: absolute; left: 450px; top: 300px;"><img src="http://i.imgur.com/1s6etBg.png" alt="poterLogo" style = "width: 80%;">
         <!-- <p style = "color: white">Fighting Game</p> -->
@@ -142,11 +142,25 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         maingame.pause();
       });
 
+      //Character Select Sounds   
+
        $(".harryfight").on("click", function() {
         harrychoose.play();
       });
 
-       
+       $(".hermionefight").on("click", function() {
+        hermionechoose.play();
+      });
+
+       $(".snapefight").on("click", function() {
+        snapechoose.play();
+      });
+
+       $(".voldemortfight").on("click", function() {
+        voldemortchoose.play();
+      });
+
+
     // $( "#charselect" ).click(function()
     //     { $( this ).hide(); });
 
