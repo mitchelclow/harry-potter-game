@@ -72,9 +72,9 @@
     </div>
     <div class="hermionestats" style="color: white; font-size: 20px; display: inline-block; width: 200px;">
     </div>
-    <div class="snapestats">
+    <div class="snapestats" style="color: white; font-size: 20px; display: inline-block; width: 200px; float: left;">
     </div>
-    <div class="voldemortstats">
+    <div class="voldemortstats" style="color: white; font-size: 20px; display: inline-block; width: 200px; float: left;">
     </div>
     <br>
      <div class="attackbutton">
@@ -244,6 +244,14 @@ var voldemortAttackButton
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".snapestats").html("Health: " + snapehealth + "  |   Attack: ");
+        $(".snapestats").append(snapeattack);
+        $(".harryenemy").html("Harry's Health: " + harryhealth + "  |  Counter-attack: ")
+        $(".harryenemy").append(harryAttackBack);
+        $(".hermioneenemy").html("Hermione's Health: " + hermionehealth + "  |  Counter-attack: ")
+        $(".hermioneenemy").append(hermioneAttackBack);
+        $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
+        $(".voldemortenemy").append(voldemortAttackBack);
       });
 
        $(".voldemortfight").on("click", function() {
@@ -265,6 +273,14 @@ var voldemortAttackButton
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".voldemortstats").html("Health: " + voldemorthealth + "  |   Attack: ");
+        $(".voldemortstats").append(voldemortattack);
+        $(".harryenemy").html("Harry's Health: " + harryhealth + "  |  Counter-attack: ")
+        $(".harryenemy").append(harryAttackBack);
+        $(".hermioneenemy").html("Hermione's Health: " + hermionehealth + "  |  Counter-attack: ")
+        $(".hermioneenemy").append(hermioneAttackBack);
+        $(".snapeenemy").html("Snape's Health: " + snapehealth + "  |  Counter-attack: ")
+        $(".snapeenemy").append(snapeAttackBack);
       });
 
   });
