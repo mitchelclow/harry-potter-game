@@ -68,9 +68,9 @@
     <br>
     <div class="activechar">
     </div>
-    <div class="harrystats" style="color: white">
+    <div class="harrystats" style="color: white; font-size: 20px;">
     </div>
-    <div class="hermionestats">
+    <div class="hermionestats" style="color: white; font-size: 20px; display: inline-block; width: 200px;">
     </div>
     <div class="snapestats">
     </div>
@@ -84,6 +84,15 @@
     </div>
 
     <div class="defendchar">
+    </div> 
+
+    <div class="harryenemy" style="position: absolute; right: 14px; top: 40px; display: inline-block; width: 600px; height: 40px; color: white; font-size: 30px;">
+    </div>
+    <div class="hermioneenemy" style="position: absolute; right: 10px; top: 80px; display: inline-block; width: 600px; height: 40px; color: white; font-size: 30px;">
+    </div>
+    <div class="snapeenemy" style="position: absolute; right: 20px; top: 120px; display: inline-block; width: 590px; height: 40px; color: white; font-size: 30px;">
+    </div>
+    <div class="voldemortenemy" style="position: absolute; right: 20px; top: 160px; display: inline-block; width: 590px; height: 40px; color: white; font-size: 30px;">
     </div>
 
     <div class = "harryhealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 34px; top: 240px;">Health: 120 | Attack: 8</div>
@@ -141,7 +150,7 @@ var voldemorthealth = 80;
 var voldemortattack = 12;
 var voldemortAttackBack = 20;
 
-var harryAttackButton
+var harryAttackButton = $(".harryattack")
 var hermioneAttackButton
 var snapeAttackButton
 var voldemortAttackButton
@@ -176,9 +185,14 @@ var voldemortAttackButton
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".attackbutton").prepend('<button>Attack</button>');
         $(".harrystats").html("Health: " + harryhealth + "  |   Attack: ");
         $(".harrystats").append(harryattack);
+        $(".hermioneenemy").html("Hermione's Health: " + hermionehealth + "  |  Counter-attack: ")
+        $(".hermioneenemy").append(hermioneAttackBack);
+        $(".snapeenemy").html("Snape's Health: " + snapehealth + "  |  Counter-attack: ")
+        $(".snapeenemy").append(snapeAttackBack);
+        $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
+        $(".voldemortenemy").append(voldemortAttackBack);
       });
 
        $(".hermionefight").on("click", function() {
@@ -200,7 +214,14 @@ var voldemortAttackButton
         $(".activechar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".attackbutton").prepend('<button>Attack</button>');
+        $(".hermionestats").html("Health: " + hermionehealth + "  |   Attack: ");
+        $(".hermionestats").append(hermioneattack);
+        $(".harryenemy").html("Harry's Health: " + harryhealth + "  |  Counter-attack: ")
+        $(".harryenemy").append(harryAttackBack);
+        $(".snapeenemy").html("Snape's Health: " + snapehealth + "  |  Counter-attack: ")
+        $(".snapeenemy").append(snapeAttackBack);
+        $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
+        $(".voldemortenemy").append(voldemortAttackBack);
 
       });
 
@@ -223,7 +244,6 @@ var voldemortAttackButton
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".attackbutton").prepend('<button>Attack</button>');
       });
 
        $(".voldemortfight").on("click", function() {
@@ -245,7 +265,6 @@ var voldemortAttackButton
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".attackbutton").prepend('<button>Attack</button>');
       });
 
   });
@@ -255,7 +274,7 @@ var voldemortAttackButton
 
 
 
-
+    //add enemy health and counter for each character 
     //add "choose a character to attack" and highlight character being attacked  
     //apply attack and health to each character on fight screen
     // make attack button specifically for each character's onclick function
