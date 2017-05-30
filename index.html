@@ -136,21 +136,28 @@
     let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
     let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/maingame.mp3');
 
-    var harryhealth = 120;
-    var harryattack = 8;
-    var harryAttackBack = 15;
+    var harry = {
+        "health": 120;
+        "attack": 8;
+        "AttackBack": = 15;
+    }
 
-    var hermionehealth = 100;
-    var hermioneattack = 9;
-    var hermioneAttackBack = 5;
+    var hermione = {
+    "health": 100;
+    "attack": 9;
+    "AttackBack": 5;
+}
 
-    var snapehealth = 150;
-    var snapeattack = 6;
-    var snapeAttackBack = 20;
-
-    var voldemorthealth = 80;
-    var voldemortattack = 12;
-    var voldemortAttackBack = 20;
+    var snape = {
+    "health": 150;
+    "attack": 6;
+    "AttackBack": 20;
+}
+    var voldemort = {
+    "health": 80;
+    "attack": 12;
+    "AttackBack": 20;
+}
 
     var harryAttackButton = $(".harryattack")
     var hermioneAttackButton
@@ -187,14 +194,14 @@
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".harrystats").html("Health: " + harryhealth + "  |   Attack: ");
-        $(".harrystats").append(harryattack);
-        $(".hermioneenemy").html("Hermione's Health: " + hermionehealth + "  |  Counter-attack: ")
-        $(".hermioneenemy").append(hermioneAttackBack);
-        $(".snapeenemy").html("Snape's Health: " + snapehealth + "  |  Counter-attack: ")
-        $(".snapeenemy").append(snapeAttackBack);
-        $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
-        $(".voldemortenemy").append(voldemortAttackBack);
+        $(".harrystats").html("Health: " + harry.health + "  |   Attack: ");
+        $(".harrystats").append(harry.attack);
+        $(".hermioneenemy").html("Hermione's Health: " + hermione.health + "  |  Counter-attack: ")
+        $(".hermioneenemy").append(hermione.AttackBack);
+        $(".snapeenemy").html("Snape's Health: " + snape.health + "  |  Counter-attack: ")
+        $(".snapeenemy").append(snape.AttackBack);
+        $(".voldemortenemy").html("Voldemort's Health: " + voldemort.health + "  |  Counter-attack: ")
+        $(".voldemortenemy").append(voldemort.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
 
     });
@@ -218,14 +225,14 @@
         $(".activechar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".hermionestats").html("Health: " + hermionehealth + "  |   Attack: ");
-        $(".hermionestats").append(hermioneattack);
-        $(".harryenemy").html("Harry's Health: " + harryhealth + "  |  Counter-attack: ")
-        $(".harryenemy").append(harryAttackBack);
-        $(".snapeenemy").html("Snape's Health: " + snapehealth + "  |  Counter-attack: ")
-        $(".snapeenemy").append(snapeAttackBack);
-        $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
-        $(".voldemortenemy").append(voldemortAttackBack);
+        $(".hermionestats").html("Health: " + hermione.health + "  |   Attack: ");
+        $(".hermionestats").append(hermione.attack);
+        $(".harryenemy").html("Harry's Health: " + harry.health + "  |  Counter-attack: ")
+        $(".harryenemy").append(harry.AttackBack);
+        $(".snapeenemy").html("Snape's Health: " + snape.health + "  |  Counter-attack: ")
+        $(".snapeenemy").append(snape.AttackBack);
+        $(".voldemortenemy").html("Voldemort's Health: " + voldemort.health + "  |  Counter-attack: ")
+        $(".voldemortenemy").append(voldemort.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
 
     });
@@ -249,14 +256,14 @@
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".snapestats").html("Health: " + snapehealth + "  |   Attack: ");
-        $(".snapestats").append(snapeattack);
-        $(".harryenemy").html("Harry's Health: " + harryhealth + "  |  Counter-attack: ")
-        $(".harryenemy").append(harryAttackBack);
-        $(".hermioneenemy").html("Hermione's Health: " + hermionehealth + "  |  Counter-attack: ")
-        $(".hermioneenemy").append(hermioneAttackBack);
-        $(".voldemortenemy").html("Voldemort's Health: " + voldemorthealth + "  |  Counter-attack: ")
-        $(".voldemortenemy").append(voldemortAttackBack);
+        $(".snapestats").html("Health: " + snape.health + "  |   Attack: ");
+        $(".snapestats").append(snape.attack);
+        $(".harryenemy").html("Harry's Health: " + harry.health + "  |  Counter-attack: ")
+        $(".harryenemy").append(harry.AttackBack);
+        $(".hermioneenemy").html("Hermione's Health: " + hermione.health + "  |  Counter-attack: ")
+        $(".hermioneenemy").append(hermione.AttackBack);
+        $(".voldemortenemy").html("Voldemort's Health: " + voldemort.health + "  |  Counter-attack: ")
+        $(".voldemortenemy").append(voldemort.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
     });
 
@@ -279,14 +286,14 @@
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
-        $(".voldemortstats").html("Health: " + voldemorthealth + "  |   Attack: ");
-        $(".voldemortstats").append(voldemortattack);
-        $(".harryenemy").html("Harry's Health: " + harryhealth + "  |  Counter-attack: ")
-        $(".harryenemy").append(harryAttackBack);
-        $(".hermioneenemy").html("Hermione's Health: " + hermionehealth + "  |  Counter-attack: ")
-        $(".hermioneenemy").append(hermioneAttackBack);
-        $(".snapeenemy").html("Snape's Health: " + snapehealth + "  |  Counter-attack: ")
-        $(".snapeenemy").append(snapeAttackBack);
+        $(".voldemortstats").html("Health: " + voldemort.health + "  |   Attack: ");
+        $(".voldemortstats").append(voldemort.attack);
+        $(".harryenemy").html("Harry's Health: " + harry.health + "  |  Counter-attack: ")
+        $(".harryenemy").append(harry.AttackBack);
+        $(".hermioneenemy").html("Hermione's Health: " + hermione.health + "  |  Counter-attack: ")
+        $(".hermioneenemy").append(hermione.AttackBack);
+        $(".snapeenemy").html("Snape's Health: " + snape.health + "  |  Counter-attack: ")
+        $(".snapeenemy").append(snape.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
     });
 
