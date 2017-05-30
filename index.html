@@ -47,7 +47,7 @@
         <div class="snapefight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
         <div class="voldemortfight" style = "width: 255px; border-style: solid; border-color: black; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
 
-         <div style = "position: absolute; left: 450px; top: 300px;"><img src="http://i.imgur.com/1s6etBg.png" alt="poterLogo" style = "width: 80%;">
+         <div style = "position: absolute; left: 450px; top: 300px;"><img src="http://i.imgur.com/ECtWXE2.png" alt="poterLogo" style = "width: 80%;">
         <!-- <p style = "color: white">Fighting Game</p> -->
          </div>
 
@@ -61,8 +61,8 @@
         Fight the remaining characters in the best order to win.
         <br></container>
 
-        <button class="btn btn-warning btn-xs theme-button"><span class="glyphicon glyphicon-music"></span> Play Music</button>
-        <button class="btn btn-default btn-xs pause-button"><span class="glyphicon glyphicon-pause"></span> Pause Music</button>
+        <button class="btn btn-warning btn-xs theme-button" style = "position: absolute; bottom: 10px; right: 120px;"><span class="glyphicon glyphicon-music"></span> Play Music</button>
+        <button class="btn btn-default btn-xs pause-button"  style = "position: absolute; bottom: 10px; right: 30px;"><span class="glyphicon glyphicon-pause"></span> Pause Music</button>
     </div>
 
     <div id="activechar">
@@ -101,29 +101,29 @@ let voldemortwin = new Audio('https://ia801505.us.archive.org/24/items/testerpag
 let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
 let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/maingame.mp3');
 
-    let characters = {
-    'Harry': {
+    var characters = {
+    'harry': {
         name: 'Harry',
         health: 120,
         attack: 8,
         imageUrl: "http://i.imgur.com/X4FvjfZ.png",
         enemyAttackBack: 15
     }, 
-    'Hermione': {
+    'hermione': {
         name: 'Hermione',
         health: 100,
         attack: 14,
         imageUrl: "http://i.imgur.com/r8BHvb0.png",
         enemyAttackBack: 5
     }, 
-    'Snape': {
+    'snape': {
         name: 'Snape',
         health: 150,
         attack: 8,
         imageUrl: "http://i.imgur.com/7NwoQW5.png",
         enemyAttackBack: 20
     }, 
-    'Voldemort': {
+    'voldemort': {
         name: 'Voldemort',
         health: 180,
         attack: 7,
@@ -151,6 +151,8 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         $(".snapefight").hide();
         $(".voldemortfight").hide();
         $(".choosespellcaster").hide();
+        $("#activechar").prepend(
+        '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>')
       });
 
        $(".hermionefight").on("click", function() {
