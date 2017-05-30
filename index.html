@@ -41,7 +41,8 @@
 
         
     <div id="charselect">
-        <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;";><img id="harryfight" src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>
+        <div class=".harryfight" style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-left: 14px; margin-top: 9px;";>
+        <img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px;"><img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250"></div>
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-right: 2px; margin-top: 9px"><img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250"></div>
         <div style = "width: 255px; border-style: solid; border-color: black; border-image; float: left; margin-top: 9px; margin-right: 60px"><img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250"></div>
@@ -98,6 +99,7 @@ let snapelose = new Audio('https://ia601505.us.archive.org/24/items/testerpage/s
 let voldemortchoose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortchoose.mp3');
 let voldemortwin = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortwin.mp3');
 let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
+let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/maingame.mp3');
 
     let characters = {
     'Harry': {
@@ -131,19 +133,30 @@ let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpa
 };
 
 
-    var audioElement = document.createElement("audioElement");
-    audioElement.setAttribute("src", "https://ia601509.us.archive.org/26/items/maingame/maingame.mp3");
-
       // Theme Button
         $(".theme-button").on("click", function() {
-        audioElement.play();
+        maingame.play();
       });
 
       $(".pause-button").on("click", function() {
-        audioElement.pause();
+        maingame.pause();
       });
 
+       $(".harryfight").on("click", function() {
+        harrychoose.play();
+      });
+
+       
+    // $( "#charselect" ).click(function()
+    //     { $( this ).hide(); });
+
   });
+
+
+
+
+
+
 
       // $("#harryfight").click(function() { alert( "You clicked me" ); });
 
