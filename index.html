@@ -142,10 +142,14 @@ let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/mai
         maingame.pause();
       });
 
-      //Character Select Sounds   
+      //Character Select Functions   
 
        $(".harryfight").on("click", function() {
         harrychoose.play();
+        $(".harryfight").hide();
+        $(".hermionefight").hide();
+        $(".snapefight").hide();
+        $(".voldemortfight").hide();
       });
 
        $(".hermionefight").on("click", function() {
