@@ -68,6 +68,8 @@
     <br>
     <div class="activechar">
     </div>
+    <div class="attackbutton">
+    </div>
     <br>
     <br>
     <div class="enemylogo">
@@ -78,11 +80,11 @@
 
     <div class = "harryhealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 34px; top: 240px;">Health: 120 | Attack: 8</div>
 
-    <div class = "hermionehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 290px; top: 240px;">Health: 100 | Attack: 13</div>
+    <div class = "hermionehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 290px; top: 240px;">Health: 100 | Attack: 9</div>
 
     <div class = "snapehealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 550px; top: 240px;">Health: 150 | Attack: 6</div>
 
-    <div class = "voldemorthealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 800px; top: 240px;">Health: 90 | Attack: 12</div>
+    <div class = "voldemorthealth" style="display: inline-block; width: 220px; height: 40px; color: #e5e5e5; font-size: 23px; position: absolute; left: 800px; top: 240px;">Health: 80 | Attack: 12</div>
         
 
     </header>
@@ -120,14 +122,14 @@ var harryattack = 8;
 var harryAttackBack = 15;
 
 var hermionehealth = 100;
-var hermioneattack = 13;
+var hermioneattack = 9;
 var hermioneAttackBack = 5;
 
 var snapehealth = 150;
 var snapeattack = 6;
 var snapeAttackBack = 20;
 
-var voldemorthealth = 90;
+var voldemorthealth = 80;
 var voldemortattack = 12;
 var voldemortAttackBack = 20;
 
@@ -162,6 +164,7 @@ var voldemortAttackBack = 20;
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".attackbutton").prepend('<button>Attack</button>');
       });
 
        $(".hermionefight").on("click", function() {
@@ -183,6 +186,7 @@ var voldemortAttackBack = 20;
         $(".activechar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".attackbutton").prepend('<button>Attack</button>');
 
       });
 
@@ -205,6 +209,7 @@ var voldemortAttackBack = 20;
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".attackbutton").prepend('<button>Attack</button>');
       });
 
        $(".voldemortfight").on("click", function() {
@@ -226,6 +231,7 @@ var voldemortAttackBack = 20;
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".attackbutton").prepend('<button>Attack</button>');
       });
 
   });
@@ -237,7 +243,6 @@ var voldemortAttackBack = 20;
 
 
       
-   //display health and attack on main page
     //apply attack and health to each character
     // make attack button for each character's onclick function
     //sounds for winning, and losing
