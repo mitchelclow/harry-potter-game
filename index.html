@@ -293,10 +293,10 @@ var voldemortDefend
         $(".enemylogo").prepend(
             '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend(
-            '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
-        $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
+            '<img id="harryDefends" src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+        $(".defendchar").prepend('<img id="hermioneDefends" src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
-        $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".defendchar").prepend('<img id="voldemortDefends" src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
         $(".snapestats").html("Health: " + snape.health + "  |   Attack: ");
         $(".snapestats").append(snape.attack);
         $(".harryenemy").html("Harry's Health: " + harry.health + "  |  Counter-attack: ")
@@ -306,6 +306,27 @@ var voldemortDefend
         $(".voldemortenemy").html("Voldemort's Health: " + voldemort.health + "  |  Counter-attack: ")
         $(".voldemortenemy").append(voldemort.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
+
+         $("#harryDefends").on("click", function() {
+            if (defender == undefined) {
+                defender = harry;
+                $("#defenderStats").html("<p>HP: " + harry.health + " | Attack: " + harry.AttackBack +"</p>");
+            }
+        });
+
+     $("#voldemortDefends").on("click", function() {
+        if (defender == undefined) {
+            defender = voldemort;
+            $("#defenderStats").html("<p>HP: " + voldemort.health + " | Attack: " + voldemort.AttackBack +"</p>");
+        }
+    });
+
+     $("#hermioneDefends").on("click", function() {
+        if (defender == undefined) {
+            defender = hermione;
+            $("#defenderStats").html("<p>HP: " + hermione.health + " | Attack: " + hermione.AttackBack +"</p>");
+        }
+    });
     });
       $(".voldemortfight").on("click", function() {
         voldemortchoose.play();
@@ -322,9 +343,9 @@ var voldemortDefend
         $(".enemylogo").prepend(
             '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend(
-            '<img src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
-        $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
-        $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
+            '<img id="harryDefends" src="http://i.imgur.com/X4FvjfZ.png" alt="harry" height="250" width="250"></div>');
+        $(".defendchar").prepend('<img id="hermioneDefends" src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
+        $(".defendchar").prepend('<img id="snapeDefends" src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
         $(".activechar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
         $(".voldemortstats").html("Health: " + voldemort.health + "  |   Attack: ");
         $(".voldemortstats").append(voldemort.attack);
@@ -335,6 +356,27 @@ var voldemortDefend
         $(".snapeenemy").html("Snape's Health: " + snape.health + "  |  Counter-attack: ")
         $(".snapeenemy").append(snape.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
+
+         $("#snapeDefends").on("click", function() {
+            if (defender == undefined) {
+                defender = snape;
+                $("#defenderStats").html("<p>HP: " + snape.health + " | Attack: " + snape.AttackBack +"</p>");
+            }
+        });
+
+     $("#harryDefends").on("click", function() {
+        if (defender == undefined) {
+            defender = harry;
+            $("#defenderStats").html("<p>HP: " + harry.health + " | Attack: " + harry.AttackBack +"</p>");
+        }
+    });
+
+     $("#hermioneDefends").on("click", function() {
+        if (defender == undefined) {
+            defender = hermione;
+            $("#defenderStats").html("<p>HP: " + hermione.health + " | Attack: " + hermione.AttackBack +"</p>");
+        }
+    });
     });
 });
     //add "choose a character to attack" and highlight character being attacked  
