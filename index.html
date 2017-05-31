@@ -118,12 +118,9 @@
 
                 <!-- Script -->
                 <script>
-
                     $(document).ready(function() {
-
                         var attacker
                         var defender
-
     //audio clips
     let harrychoose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrychoose.mp3');
     let harrywin = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrywin.mp3');
@@ -138,19 +135,16 @@
     let voldemortwin = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortwin.mp3');
     let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
     let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/maingame.mp3');
-
     var harry = {
         "health": 120,
         "attack": 8,
         "AttackBack": 15
     }
-
     var hermione = {
     "health": 100,
     "attack": 9,
     "AttackBack": 5
 }
-
     var snape = {
     "health": 150,
     "attack": 6,
@@ -161,27 +155,19 @@
     "attack": 12,
     "AttackBack": 20
 }
-
-
 var harryDefend
 var hermioneDefend
 var snapeDefend
 var voldemortDefend
-
     var attackButton = $("<button id='attackBtn'>Attack!</button>")
-
-
       // Theme Button
       $(".theme-button").on("click", function() {
         maingame.play();
     });
-
       $(".pause-button").on("click", function() {
         maingame.pause();
     });
-
       //Character Select Functions   
-
       $(".harryfight").on("click", function() {
         harrychoose.play();
         attacker = harry
@@ -211,26 +197,26 @@ var voldemortDefend
         $(".voldemortenemy").html("Voldemort's Health: " + voldemort.health + "  |  Counter-attack: ")
         $(".voldemortenemy").append(voldemort.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.");
-
         $("#snapeDefends").on("click", function() {
-        if (defender == undefined) {
-        defender = snape;
-        $("#defenderStats").html("<p>HP: " + snape.health + " | Attack: " + snape.AttackBack +"</p>");
+            if (defender == undefined) {
+                defender = snape;
+                $("#defenderStats").html("<p>HP: " + snape.health + " | Attack: " + snape.AttackBack +"</p>");
+            }
+        });
 
      $("#voldemortDefends").on("click", function() {
         if (defender == undefined) {
-        defender = voldemort;
-        $("#defenderStats").html("<p>HP: " + voldemort.health + " | Attack: " + voldemort.AttackBack +"</p>");
-    }
-});
+            defender = voldemort;
+            $("#defenderStats").html("<p>HP: " + voldemort.health + " | Attack: " + voldemort.AttackBack +"</p>");
+        }
+    });
         $("#attackDiv").append(attackButton);
         $("#attackButton").on("click", function() {
             defender.health = defender.health - attacker.attack
 
     });
 
-    });
-
+    
       $(".hermionefight").on("click", function() {
         hermionechoose.play();
         $(".harryfight").hide();
@@ -259,9 +245,7 @@ var voldemortDefend
         $(".voldemortenemy").html("Voldemort's Health: " + voldemort.health + "  |  Counter-attack: ")
         $(".voldemortenemy").append(voldemort.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
-
     });
-
       $(".snapefight").on("click", function() {
         snapechoose.play();
         $(".harryfight").hide();
@@ -291,7 +275,6 @@ var voldemortDefend
         $(".voldemortenemy").append(voldemort.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
     });
-
       $(".voldemortfight").on("click", function() {
         voldemortchoose.play();
         $(".harryfight").hide();
@@ -322,31 +305,16 @@ var voldemortDefend
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
     });
 });
-
-
-
-
-
-
     //add "choose a character to attack" and highlight character being attacked  
     //make attack button specifically for each character's onclick function
     //sounds for winning, and losing
     //reset function for when the game ends (both losing and winning)
-
-
 </script>
-
-
-
-
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script>
 </script>
-
 </body>
-
 </html>
