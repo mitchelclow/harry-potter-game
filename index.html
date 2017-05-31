@@ -135,6 +135,10 @@
     let voldemortwin = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortwin.mp3');
     let voldemortlose = new Audio('https://ia801505.us.archive.org/24/items/testerpage/voldemortlose.mp3');
     let maingame = new Audio ('https://ia601509.us.archive.org/26/items/maingame/maingame.mp3');
+    
+
+
+
     var harry = {
         "health": 120,
         "attack": 8,
@@ -219,9 +223,10 @@ var voldemortDefend
     });
 
         $("#attackDiv").append(attackButton);
-        $("#attackButton").on("click", function() {
-            defender.health = defender.health - attacker.attack
-
+       attackButton.on("click", function() {
+            console.log(attacker, defender);
+            defender.health = defender.health - attacker.attack;
+            $("#defenderStats").html("<p>HP: " + defender.health + " | Attack: " + defender.AttackBack +"</p>");
     });
 
     });
