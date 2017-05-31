@@ -85,6 +85,8 @@
 
                     <div class="defendchar">
                     </div> 
+                    <div id="attackDiv">
+                    </div>
 
                     <div class="harryenemy" style="position: absolute; right: 14px; top: 40px; display: inline-block; width: 600px; height: 40px; color: white; font-size: 30px;">
                     </div>
@@ -105,6 +107,9 @@
 
                     <div class = "chooseEnemy" style="display: inline-block; width: 1000px; height: 40px; color: orange; font-size: 23px; position: absolute; left: 900px; top: 500px;"></div>
 
+                    <div id = "defenderStats" style = "color: white; font-size: 20px;">
+                    </div>
+
 
                 </header>
 
@@ -116,10 +121,8 @@
 
                     $(document).ready(function() {
 
-                        var harry
-                        var hermione
-                        var snape
-                        var voldemort
+                        var attacker
+                        var defender
 
     //audio clips
     let harrychoose = new Audio('https://ia601504.us.archive.org/21/items/harrylose/harrychoose.mp3');
@@ -159,10 +162,14 @@
     "AttackBack": 20
 }
 
-    var harryAttackButton = $(".harryattack")
-    var hermioneAttackButton
-    var snapeAttackButton
-    var voldemortAttackButton
+
+var harryDefend
+var hermioneDefend
+var snapeDefend
+var voldemortDefend
+
+    var attackButton = $("<button id='attackBtn'>Attack!</button>")
+
 
       // Theme Button
       $(".theme-button").on("click", function() {
@@ -177,6 +184,7 @@
 
       $(".harryfight").on("click", function() {
         harrychoose.play();
+        attacker = harry
         $(".harryfight").hide();
         $(".hermionefight").hide();
         $(".snapefight").hide();
@@ -192,8 +200,8 @@
         $(".enemylogo").prepend(
             '<img src="http://i.imgur.com/JPrCBTo.png" alt="enemylogo">');
         $(".defendchar").prepend('<img src="http://i.imgur.com/r8BHvb0.png" alt="hermione" height="250" width="250">');
-        $(".defendchar").prepend('<img src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
-        $(".defendchar").prepend('<img src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
+        $(".defendchar").prepend('<img id ="snapeDefends" src="http://i.imgur.com/7NwoQW5.png" alt="snape" height="250" width="250">');
+        $(".defendchar").prepend('<img id ="voldemortDefends" src="http://i.imgur.com/YrG6Wja.png" alt="voldemort" height="250" width="250">');
         $(".harrystats").html("Health: " + harry.health + "  |   Attack: ");
         $(".harrystats").append(harry.attack);
         $(".hermioneenemy").html("Hermione's Health: " + hermione.health + "  |  Counter-attack: ")
@@ -202,7 +210,24 @@
         $(".snapeenemy").append(snape.AttackBack);
         $(".voldemortenemy").html("Voldemort's Health: " + voldemort.health + "  |  Counter-attack: ")
         $(".voldemortenemy").append(voldemort.AttackBack);
-        $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
+        $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.");
+
+        $("#snapeDefends").on("click", function() {
+        if (defender == undefined) {
+        defender = snape;
+        $("#defenderStats").html("<p>HP: " + snape.health + " | Attack: " + snape.AttackBack +"</p>");
+
+     $("#voldemortDefends").on("click", function() {
+        if (defender == undefined) {
+        defender = voldemort;
+        $("#defenderStats").html("<p>HP: " + voldemort.health + " | Attack: " + voldemort.AttackBack +"</p>");
+    }
+});
+        $("#attackDiv").append(attackButton);
+        $("#attackButton").on("click", function() {
+            defender.health = defender.health - attacker.attack
+
+    });
 
     });
 
@@ -296,8 +321,8 @@
         $(".snapeenemy").append(snape.AttackBack);
         $(".chooseEnemy").html("Choose one character to fight at a time. <br> One you've defeated one enemy, choose the next to face. <br> You win when you are the last wizard standing.")
     });
+});
 
-  });
 
 
 
